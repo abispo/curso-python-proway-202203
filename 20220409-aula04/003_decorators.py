@@ -2,7 +2,7 @@
 # Decorators é um tipo de recurso que utilizamos para alterar o comportamento padrão de uma função/método/classe
 # Funções são considerados objetos de primeira classe, ou seja, podemos passar pra funções, retornar de funções, etc
 
-from lib_decorators import my_decorator
+from lib_decorators import my_decorator, log_function_call
 
 
 def execute_func(func):
@@ -29,7 +29,7 @@ def decorated_1():
     print("Açúcar sintático")
 
 
-@my_decorator
+@log_function_call
 def hello_name(name: str, status=False):
     """
     Função que retorna uma mensagem de hello para o usuário
